@@ -22,19 +22,19 @@ mongoose.Promise = Promise;
  * MongoDB Default Connection
  */
 
-const connectMongo = () => {
-    mongoose.connect(config.mongoConf.url, config.mongoConf.options);
-};
-
-connectMongo();
-
-mongoose.connection.on('connected', () => {
-    winston.log('info', text.mongoConnection);
-});
-mongoose.connection.on('error', err => {
-    winston.log('error', err);
-    setTimeout(connectMongo, 5000);
-});
+// const connectMongo = () => {
+//     mongoose.connect(config.mongoConf.url, config.mongoConf.options);
+// };
+//
+// connectMongo();
+//
+// mongoose.connection.on('connected', () => {
+//     winston.log('info', text.mongoConnection);
+// });
+// mongoose.connection.on('error', err => {
+//     winston.log('error', err);
+//     setTimeout(connectMongo, 5000);
+// });
 
 const mongo = {
 

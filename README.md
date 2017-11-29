@@ -6,7 +6,7 @@
 2) cd crowdbotics
 3) npm i
 4) npm start
-5) visit localhost:3000
+5) visit 127.0.0.1:3000
 
 # If you have no time to register use these credentials
 
