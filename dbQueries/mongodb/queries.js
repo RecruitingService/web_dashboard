@@ -114,7 +114,33 @@ const mongo = {
                 if (!_.isEmpty(doc)) return next(null, doc);
                 return next({ message: 'Token is not valid' });
             }, err => next(err));
-    }
+    },
+
+    /**
+     * Get Data By Token
+     * @param {String} token
+     * @param {Function} next
+     */
+
+    getUserInfo: (token, next) => {
+        UsersModel.findOne({ token }, null, { lean: true })
+            .then(doc => {
+                if (!_.isEmpty(doc)) return next(null, doc);
+                return next({
+                    message: text.userNotFound, status: 200
+                });
+            }, err => next(err));
+    },
+
+    /**
+     * Get Questions From Collection
+     * @param {Function} next
+     */
+
+    getQuestions: next => {
+        QuestionsModel.find({}, null, { lean: true })
+            .then(doc => next(null, doc), err => next(err));
+    },
 
 };
 

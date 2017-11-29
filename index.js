@@ -16,7 +16,7 @@ const auth = require('./middlewares/auth').isAuth;
 
 process.env.NODE_ENV = config.mode;
 
-const index = require('./routes/index');
+const index = require('./routes');
 const api = require('./routes/api');
 
 const app = express();

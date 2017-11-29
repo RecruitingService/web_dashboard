@@ -29,9 +29,9 @@ const defaultSchema = new Schema({}, {
  */
 
 const UsersModel = mongoose.model('users', usersSchema);
-const QuestionModel = mongoose.model('questions', defaultSchema);
+const QuestionsModel = mongoose.model('questions', defaultSchema);
 
 module.exports = {
     UsersModel,
-    QuestionModel
+    QuestionsModel
 };
