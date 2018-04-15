@@ -9,12 +9,12 @@ const config = {
     port: parseInt(process.env.PORT, 10) || 3000,
     hostname: '127.0.0.1',
     mongoConf: {
-        url: 'mongodb://ds125146.mlab.com:25146/crowdbotics',
+        url: 'mongodb://ds061208.mlab.com:61208/recruiter',
         options: {
             db: { native_parser: true },
             server: { poolSize: 5 },
             user: 'admin',
-            pass: 'admin'
+            pass: 'admin2018'
         }
     }
 

@@ -52,15 +52,15 @@ function renderIndex(req, res) {
 
         mongoRequests.checkToken(token, err => {
 
-            if (!err) return res.render('./index.jade', { title: 'crowdbotics' });
+            if (!err) return res.render('./index.jade', { title: 'dashboard' });
 
-            return res.render('./login.jade', { title: 'crowdbotics' });
+            return res.render('./login.jade', { title: 'dashboard' });
 
         });
         return;
 
     }
 
-    return res.render('./login.jade', { title: 'crowdbotics' });
+    return res.render('./login.jade', { title: 'dashboard' });
 
 }

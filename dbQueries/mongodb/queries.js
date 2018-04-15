@@ -11,8 +11,7 @@ const async = require('async');
 const _ = require('lodash');
 const tokenFunction = require('../../modules/token');
 const {
-    UsersModel,
-    QuestionsModel
+    UsersModel
 } = require('./models');
 
 mongoose.Promise = Promise;
@@ -130,16 +129,6 @@ const mongo = {
                     message: text.userNotFound, status: 200
                 });
             }, err => next(err));
-    },
-
-    /**
-     * Get Questions From Collection
-     * @param {Function} next
-     */
-
-    getQuestions: next => {
-        QuestionsModel.find({}, null, { lean: true })
-            .then(doc => next(null, doc), err => next(err));
     },
 
 };

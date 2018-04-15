@@ -1,4 +1,4 @@
-const app = angular.module('crowdbotics', ['ngRoute', 'ngSanitize', 'ngCookies']);
+const app = angular.module('dashboard', ['ngRoute', 'ngSanitize', 'ngCookies']);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
     ($routeProvider, $locationProvider, $httpProvider) => {
