@@ -1,6 +1,21 @@
 
 <div class="row">
-
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vacancy in vacancies">
+                <td>{{vacancy.vacancy.title}}</td>
+                <td>{{vacancy.vacancy.description}}</td>
+                <td>{{vacancy.vacancy.city}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <script>

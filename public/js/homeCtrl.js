@@ -7,7 +7,9 @@ app.controller('homeCtrl', ['$scope', '$rootScope',
 
         $scope.getVacancies = () => {
             $rootScope.httpRequest('vacancies', 'GET', {}, data => {
-                console.error(data);
+                if (data) {
+                    $scope.vacancies = data.data;
+                }
             });
         };
         $scope.getVacancies();
