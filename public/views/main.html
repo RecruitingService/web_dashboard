@@ -1,11 +1,21 @@
 
 <div class="row">
-    <table>
+    <table class="striped">
         <thead>
             <tr>
                 <th>Title</th>
                 <th>Description</th>
                 <th>City</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Education</th>
+                <th>Citizen</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Term</th>
+                <th>WorkType</th>
+                <th>Period</th>
+                <th>Description</th>
                 <th>Chat ID</th>
             </tr>
         </thead>
@@ -14,6 +24,16 @@
                 <td>{{vacancy.vacancy.title}}</td>
                 <td>{{vacancy.vacancy.description}}</td>
                 <td>{{vacancy.vacancy.city}}</td>
+                <td>{{vacancy.vacancy.salary}}</td>
+                <td>{{vacancy.vacancy.experience}}</td>
+                <td>{{vacancy.vacancy.education}}</td>
+                <td>{{vacancy.vacancy.citizen}}</td>
+                <td>{{vacancy.vacancy.age}}</td>
+                <td>{{vacancy.vacancy.sex}}</td>
+                <td>{{vacancy.vacancy.term}}</td>
+                <td>{{vacancy.vacancy.workType}}</td>
+                <td>{{vacancy.vacancy.period}}</td>
+                <td>{{vacancy.vacancy.description}}</td>
                 <td><a ng-href="/profile/{{vacancy.chatId}}">{{vacancy.chatId}}</a></td>
             </tr>
         </tbody>
