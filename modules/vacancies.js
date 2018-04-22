@@ -17,14 +17,23 @@ const questions = {
             const vacancies = await VacanciesModel.find({}, null).lean();
             return {
                 meta: {
-                    status: "200"
+                    status: '200'
                 },
                 data: vacancies
-            }
+            };
         } catch (err) {
             throw new Error(err);
         }
+    },
 
+    getVacancyById: async id => {
+        const vacancies = await VacanciesModel.find({ chatId: parseInt(id, 10) }, null).lean();
+        return {
+            meta: {
+                status: '200'
+            },
+            data: vacancies
+        };
     }
 
 };

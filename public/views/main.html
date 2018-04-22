@@ -6,6 +6,7 @@
                 <th>Title</th>
                 <th>Description</th>
                 <th>City</th>
+                <th>Chat ID</th>
             </tr>
         </thead>
         <tbody>
@@ -13,6 +14,7 @@
                 <td>{{vacancy.vacancy.title}}</td>
                 <td>{{vacancy.vacancy.description}}</td>
                 <td>{{vacancy.vacancy.city}}</td>
+                <td><a ng-href="/profile/{{vacancy.chatId}}">{{vacancy.chatId}}</a></td>
             </tr>
         </tbody>
     </table>
